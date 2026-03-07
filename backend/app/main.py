@@ -9,3 +9,7 @@ app = FastAPI()
 
 app.include_router(auth_router.router)
 app.include_router(task_router.router)
+
+@app.get("/")
+def home():
+    return {"message": "FastAPI running on Render"}
